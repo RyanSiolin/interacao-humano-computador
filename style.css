@@ -193,6 +193,28 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
+.Page-Link {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+    margin-top: 24px;
+}
+
+.Button.link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 18px;
+    border-radius: 12px;
+    background: #002A48;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+}
+
 .Hero-Search-Section .Container.info {
     display: flex;
     gap: 8px;
@@ -552,7 +574,8 @@ body {
 .BottomNavBar {
     position: fixed;
     bottom: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 390px;
     height: 57px;
     display: flex;
@@ -625,11 +648,390 @@ body {
     border-radius: 50%;
 }
 
+.Agendar-Coleta-em-Casa {
+    display: flex;
+    flex-direction: column;
+    width: 390px;
+    min-height: 100vh;
+    margin: 0 auto;
+    position: relative;
+    background: linear-gradient(to bottom, #F7F9FD, #FFFFFF);
+}
+
+.Agendar-Coleta-em-Casa .Header-TopAppBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
+    background: #F7F9FD;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    z-index: 10;
+}
+
+.Agendar-Coleta-em-Casa .Header-TopAppBar .Container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.Agendar-Coleta-em-Casa .Button.menu {
+    background: none;
+    border: none;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.Agendar-Coleta-em-Casa .Button.menu img {
+    width: 18px;
+    height: auto;
+    display: block;
+}
+
+.Agendar-Coleta-em-Casa .Heading-1 .Text {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #002A48;
+}
+
+.Agendar-Coleta-em-Casa .Background-Border {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #CFE5FF;
+    border: 2px solid #E6E8EB;
+    border-radius: 9999px;
+}
+
+.Agendar-Coleta-em-Casa .User-Profile {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #CFE5FF;
+}
+
+.Agendar-Coleta-em-Casa .Main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 24px 0 220px;
+    align-items: center;
+}
+
+.Agendar-Coleta-em-Casa .Progress-Stepper {
+    position: relative;
+    width: 100%;
+    padding: 0 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Agendar-Coleta-em-Casa .Horizontal-Divider {
+    position: absolute;
+    top: 29px;
+    left: 8px;
+    right: 8px;
+    height: 2px;
+    background: #C2C7D0;
+}
+
+.Agendar-Coleta-em-Casa .Progress-Stepper > .Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    width: calc((100% - 24px) / 4);
+}
+
+.Agendar-Coleta-em-Casa .Progress-Stepper .Background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 9999px;
+    background: #E0E3E6;
+}
+
+.Agendar-Coleta-em-Casa .Progress-Stepper .Background.active {
+    background: #002A48;
+}
+
+.Agendar-Coleta-em-Casa .Progress-Stepper .Background .Text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #72777F;
+}
+
+.Agendar-Coleta-em-Casa .Progress-Stepper .Background.active .Text {
+    color: #FFFFFF;
+}
+
+.Agendar-Coleta-em-Casa .Progress-Stepper .Text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #42474E;
+    text-align: center;
+}
+
+.Agendar-Coleta-em-Casa .Progress-Stepper .Text.active {
+    color: #002A48;
+}
+
+.Agendar-Coleta-em-Casa .Section-Step-1-Package-Details,
+.Agendar-Coleta-em-Casa .Section-Step-2-Pickup-Address,
+.Agendar-Coleta-em-Casa .Section-Step-3-Date-Time,
+.Agendar-Coleta-em-Casa .Section-Step-4-Confirmation {
+    width: 100%;
+    max-width: 390px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.Agendar-Coleta-em-Casa .Heading-2 .Text {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #002A48;
+}
+
+.Agendar-Coleta-em-Casa .Background-VerticalBorder-Shadow {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    padding: 16px;
+    background: #FFFFFF;
+    border-left: 4px solid #002A48;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.Agendar-Coleta-em-Casa .Background-VerticalBorder-Shadow > .Container:first-child .Text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #42474E;
+}
+
+.Agendar-Coleta-em-Casa .Background-VerticalBorder-Shadow > .Container:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.Agendar-Coleta-em-Casa .Background-VerticalBorder-Shadow > .Container:nth-child(2) > .Container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.Agendar-Coleta-em-Casa .Label .Text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #191C1E;
+}
+
+.Agendar-Coleta-em-Casa .Options {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #F2F4F7;
+    border: 1px solid #C2C7D0;
+    border-radius: 8px;
+    padding: 12px 16px;
+}
+
+.Agendar-Coleta-em-Casa .Options img,
+.Agendar-Coleta-em-Casa .Background.pill img,
+.Agendar-Coleta-em-Casa .Button.menu img,
+.Agendar-Coleta-em-Casa .Button.CTA img,
+.Agendar-Coleta-em-Casa .BottomNavBar .Container.icon img {
+    display: block;
+    width: auto;
+    height: 16px;
+}
+
+.Agendar-Coleta-em-Casa .Input {
+    min-width: 24px;
+    min-height: 24px;
+    background: #FFFFFF;
+    border: 1px solid #C2C7D0;
+    border-radius: 4px;
+}
+
+.Agendar-Coleta-em-Casa .Background-VerticalBorder-Shadow > .Container:last-child {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.Agendar-Coleta-em-Casa .Background.pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 9999px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #191C1E;
+}
+
+.Agendar-Coleta-em-Casa .Background.pill:nth-child(1) {
+    background: #CFE5FF;
+}
+
+.Agendar-Coleta-em-Casa .Background.pill:nth-child(2) {
+    background: #FFE07F;
+}
+
+.Agendar-Coleta-em-Casa .hidden-section {
+    position: absolute;
+    left: 0;
+    top: 364px;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.Agendar-Coleta-em-Casa .Section-Step-2-Pickup-Address .Input,
+.Agendar-Coleta-em-Casa .Section-Step-4-Confirmation .Input {
+    width: 100%;
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid #C2C7D0;
+    background: #F2F4F7;
+}
+
+.Agendar-Coleta-em-Casa .Section-Step-3-Date-Time .Button {
+    background: #F2F4F7;
+    border: 1px solid #C2C7D0;
+    border-radius: 8px;
+    padding: 8px 14px;
+    min-width: 64px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #191C1E;
+    line-height: 1.5;
+    text-align: center;
+    white-space: pre-line;
+}
+
+.Agendar-Coleta-em-Casa .Section-Step-3-Date-Time .Button.selected {
+    background: #CFE5FF;
+    border-color: #002A48;
+    color: #001D34;
+}
+
+.Agendar-Coleta-em-Casa .Sticky-Footer-Action {
+    position: relative;
+    margin: 16px 0 24px;
+    width: 100%;
+    padding: 0 20px;
+    background: transparent;
+}
+
+.Agendar-Coleta-em-Casa .Button.CTA {
+    position: relative;
+    width: 100%;
+    min-height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 16px;
+    border: none;
+    border-radius: 12px;
+    background: #002A48;
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 8px 10px -6px rgba(0, 0, 0, 0.1), 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.Agendar-Coleta-em-Casa .Button.CTA .Button-shadow {
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.05);
+    z-index: -1;
+}
+
+.Agendar-Coleta-em-Casa .BottomNavBar {
+    position: relative;
+    width: 100%;
+    height: 65px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 48px;
+    padding: 8px 32px;
+    margin-top: 24px;
+    background: #F7F9FD;
+    border-top: 1px solid #C2C7D0;
+    box-shadow: 0 4px 6px -4 rgba(0, 0, 0, 0.1), 0 10px 15px -3 rgba(0, 0, 0, 0.1);
+}
+
+.Agendar-Coleta-em-Casa .BottomNavBar-shadow {
+    position: absolute;
+    inset: 0;
+    background: transparent;
+    box-shadow: 0 4px 6px -4 rgba(0, 0, 0, 0.1), 0 10px 15px -3 rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+}
+
+.Agendar-Coleta-em-Casa .Container,
+.Agendar-Coleta-em-Casa .Background {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 4px 16px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.Agendar-Coleta-em-Casa .Background {
+    background: #FFE07F;
+    border-radius: 9999px;
+}
+
+.Agendar-Coleta-em-Casa .Background .Text {
+    color: #6F5900;
+}
+
+.Agendar-Coleta-em-Casa .Text {
+    font-family: 'Inter', sans-serif;
+}
+
+.Agendar-Coleta-em-Casa .BottomNavBar .Container.icon img,
+.Agendar-Coleta-em-Casa .BottomNavBar .Background .Container.icon img {
+    width: 18px;
+    height: auto;
+}
+
 /* ========== RESPONSIVE ========== */
 @media (max-width: 480px) {
     body,
     .Início-Correios,
-    .BottomNavBar {
+    .BottomNavBar,
+    .Agendar-Coleta-em-Casa {
         width: 100vw;
     }
 }
