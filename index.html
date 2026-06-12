@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Correios</title>
+</head>
+<body>
+    <div class="Início - Correios">
+        <!-- BottomNavBar -->
+        <div class="BottomNavBar">
+            <div class="BottomNavBar-shadow"></div>
+            <div class="Link active">
+                <div class="Container icon">🏠</div>
+                <div class="Container text">
+                    <span class="Text">Início</span>
+                </div>
+            </div>
+            <div class="Link">
+                <div class="Container icon">📦</div>
+                <div class="Container text">
+                    <span class="Text">Rastreio</span>
+                </div>
+            </div>
+            <div class="Link">
+                <div class="Container icon">🚚</div>
+                <div class="Container text">
+                    <span class="Text">Coleta</span>
+                </div>
+            </div>
+            <div class="Link">
+                <div class="Container icon">🔔</div>
+                <div class="Container text">
+                    <span class="Text">Alertas</span>
+                </div>
+                <div class="Background badge"></div>
+            </div>
+        </div>
+
+        <!-- Header - TopAppBar -->
+        <header class="Header-TopAppBar">
+            <div class="Container">
+                <button class="Button menu">☰</button>
+                <div class="Heading-1">
+                    <h1 class="Text">Correios</h1>
+                </div>
+            </div>
+            <div class="Background-Border">
+                <div class="User-Profile"></div>
+            </div>
+        </header>
+
+        <!-- Floating Action Button -->
+        <button class="Floating-Action-Button">+</button>
+
+        <!-- Main -->
+        <main class="Main">
+            <!-- Hero Search Section -->
+            <section class="Hero-Search-Section">
+                <div class="Abstract-Background-Pattern"></div>
+                <div class="Heading-2">
+                    <span class="Text">Acompanhe seu objeto</span>
+                </div>
+                <div class="Container search">
+                    <div class="Input">
+                        <div class="Container input-wrapper">
+                            <span class="Text placeholder">Código de rastreio (Ex: AA123456789BR)</span>
+                        </div>
+                    </div>
+                    <div class="Container icon">🔍</div>
+                    <button class="Button rastrear">RASTREAR</button>
+                </div>
+                <div class="Container info">
+                    <div class="Container icon">ℹ️</div>
+                    <span class="Text">Entre com 13 dígitos para rastreamento internacional ou nacional.</span>
+                </div>
+            </section>
+
+            <!-- Section - Quick Actions Grid -->
+            <section class="Section-Quick-Actions-Grid">
+                <div class="Button quick-action">
+                    <div class="Background-Shadow">📦</div>
+                    <span class="Text">Rastrear</span>
+                </div>
+                <div class="Button quick-action">
+                    <div class="Background-Shadow">🚚</div>
+                    <div class="Container text-container">
+                        <span class="Text">Coleta<br>em Casa</span>
+                    </div>
+                </div>
+                <div class="Button quick-action">
+                    <div class="Background-Shadow">💰</div>
+                    <div class="Container text-container">
+                        <span class="Text">Preços e<br>Prazos</span>
+                    </div>
+                </div>
+                <div class="Button quick-action">
+                    <div class="Background-Shadow">📍</div>
+                    <span class="Text">Agências</span>
+                </div>
+            </section>
+
+            <!-- Section - Promotional Banner -->
+            <section class="Section-Promotional-Banner">
+                <div class="Container banner-image">
+                    <img src="./assets/delivery.jpg" alt="Delivery person">
+                </div>
+                <div class="Gradient"></div>
+                <div class="Container banner-content">
+                    <div class="Heading-3">
+                        <span class="Text">Envie agora com<br>SEDEX</span>
+                    </div>
+                    <div class="Container description">
+                        <span class="Text">Agilidade e<br>segurança para suas<br>encomendas em<br>todo Brasil.</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tracking Summary Section -->
+            <section class="Tracking-Summary-Section">
+                <div class="Container section-header">
+                    <div class="Heading-2">
+                        <span class="Text">Minhas Entregas</span>
+                    </div>
+                    <button class="Button view-all">Ver tudo</button>
+                </div>
+
+                <!-- Main Tracking Card -->
+                <div class="Tracking-Card main">
+                    <div class="Container card-content">
+                        <div class="Container header">
+                            <div class="Container status">
+                                <div class="Background status-badge">
+                                    <span class="Text">OBJETO EM TRÂNSITO</span>
+                                </div>
+                                <div class="Heading-4">
+                                    <span class="Text tracking-number">BR839402847PT</span>
+                                </div>
+                            </div>
+                            <div class="Container delivery-date">
+                                <div class="Container">
+                                    <span class="Text">Chega até</span>
+                                </div>
+                                <div class="Container">
+                                    <span class="Text">Quinta, 24 Out</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Container progress">
+                            <div class="Progress-Bar-Container">
+                                <div class="Line"></div>
+                                <div class="Horizontal-Divider"></div>
+                                <div class="Dots">
+                                    <div class="Container dot">
+                                        <div class="Background dot-active"></div>
+                                        <div class="Container dot-label">
+                                            <span class="Text">Postado</span>
+                                        </div>
+                                    </div>
+                                    <div class="Container dot">
+                                        <div class="Background dot-active"></div>
+                                        <div class="Container dot-label">
+                                            <span class="Text">Trânsito</span>
+                                        </div>
+                                    </div>
+                                    <div class="Container dot">
+                                        <div class="Background dot-inactive"></div>
+                                        <div class="Container dot-label">
+                                            <span class="Text">Entrega</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Background location-info">
+                                <div class="Container icon">📍</div>
+                                <div class="Container info-content">
+                                    <div class="Container">
+                                        <span class="Text location-title">Unidade de Tratamento</span>
+                                    </div>
+                                    <div class="Container">
+                                        <span class="Text location-detail">Rio de Janeiro / RJ</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Secondary Tracking Card -->
+                <div class="Tracking-Card secondary">
+                    <div class="Container card-content">
+                        <div class="Container icon">📋</div>
+                        <div class="Container info-content">
+                            <div class="Container">
+                                <span class="Text tracking-number">QD123456789BR</span>
+                            </div>
+                            <div class="Container">
+                                <span class="Text status-text">Objeto entregue ao destinatário</span>
+                            </div>
+                        </div>
+                        <div class="Container arrow">→</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

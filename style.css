@@ -1,0 +1,635 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(to bottom, #F7F9FD, #FFFFFF);
+    color: #42474E;
+    width: 390px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+.Início-Correios {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 0 0 24px;
+    width: 390px;
+    min-height: 100vh;
+    position: relative;
+    background: linear-gradient(to bottom, #F7F9FD, #FFFFFF);
+}
+
+/* ========== HEADER ========== */
+.Header-TopAppBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
+    gap: 0;
+    background: #F7F9FD;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 10;
+}
+
+.Header-TopAppBar .Container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+.Button.menu {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #002A48;
+    padding: 0;
+}
+
+.Heading-1 .Text {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.33;
+    color: #002A48;
+}
+
+.Background-Border {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    background: #CFE5FF;
+    border: 2px solid #00416B;
+    border-radius: 9999px;
+}
+
+.User-Profile {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #CFE5FF;
+}
+
+/* ========== FLOATING ACTION BUTTON ========== */
+.Floating-Action-Button {
+    position: fixed;
+    bottom: 80px;
+    right: 24px;
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background: #002A48;
+    border: none;
+    color: #002A48;
+    font-size: 32px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 8px 10px -6px rgba(0, 0, 0, 0.1), 0px 20px 25px -5px rgba(0, 0, 0, 0.1);
+    z-index: 20;
+}
+
+/* ========== MAIN CONTENT ========== */
+.Main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    padding: 16px 0px 128px;
+    flex: 1;
+}
+
+/* ========== HERO SEARCH SECTION ========== */
+.Hero-Search-Section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px;
+    width: 350px;
+    background: #002A48;
+    border-radius: 12px;
+    box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.Abstract-Background-Pattern {
+    position: absolute;
+    top: -16px;
+    right: -24px;
+    width: 90px;
+    height: 98.63px;
+    opacity: 0.1;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="white"/></svg>');
+}
+
+.Hero-Search-Section .Heading-2 {
+    position: relative;
+    z-index: 2;
+}
+
+.Hero-Search-Section .Heading-2 .Text {
+    font-size: 20px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.Hero-Search-Section .Container.search {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    padding: 8px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.Container.search .Container.icon {
+    font-size: 20px;
+    color: #42474E;
+    flex-shrink: 0;
+}
+
+.Input {
+    display: flex;
+    flex: 1;
+    background: transparent;
+}
+
+.Input .Container {
+    flex: 1;
+}
+
+.Text.placeholder {
+    font-size: 14px;
+    color: #999;
+    font-family: 'Inter', sans-serif;
+}
+
+.Button.rastrear {
+    background: #FED000;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 12px;
+    color: #6F5900;
+    cursor: pointer;
+    white-space: nowrap;
+    font-family: 'Inter', sans-serif;
+}
+
+.Hero-Search-Section .Container.info {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    padding: 8px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.Container.info .Container.icon {
+    font-size: 16px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.Container.info .Text {
+    font-size: 12px;
+    color: #9DCED1;
+    line-height: 1.4;
+}
+
+/* ========== QUICK ACTIONS GRID ========== */
+.Section-Quick-Actions-Grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    width: 100%;
+    padding: 0 20px;
+    max-width: 390px;
+}
+
+.Button.quick-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    padding: 16px 8px;
+    background: #FFFFFF;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.Background-Shadow {
+    font-size: 32px;
+}
+
+.Button.quick-action .Text {
+    font-size: 12px;
+    color: #42474E;
+    font-weight: 500;
+}
+
+.Container.text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ========== PROMOTIONAL BANNER ========== */
+.Section-Promotional-Banner {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    width: 350px;
+    height: 200px;
+    background: #FED000;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+.Container.banner-image {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: #666;
+    border-radius: 0 12px 12px 0;
+    overflow: hidden;
+}
+
+.Container.banner-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.Gradient {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.2));
+}
+
+.Container.banner-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 24px;
+    width: 50%;
+}
+
+.Section-Promotional-Banner .Heading-3 .Text {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #000;
+    line-height: 1.3;
+}
+
+.Container.description .Text {
+    font-size: 14px;
+    color: #42474E;
+    line-height: 1.4;
+}
+
+/* ========== TRACKING SUMMARY SECTION ========== */
+.Tracking-Summary-Section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.Container.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.Tracking-Summary-Section .Heading-2 .Text {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #002A48;
+}
+
+.Button.view-all {
+    background: none;
+    border: none;
+    color: #002A48;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+/* ========== TRACKING CARDS ========== */
+.Tracking-Card {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 16px;
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 12px;
+    border-left: 4px solid #002A48;
+    box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.Tracking-Card.secondary {
+    opacity: 0.8;
+    border-left-color: #999;
+}
+
+.Container.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.Container.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.Container.status {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.Background.status-badge {
+    background: #CFE5FF;
+    padding: 4px 8px;
+    border-radius: 4px;
+    width: fit-content;
+}
+
+.Background.status-badge .Text {
+    font-size: 10px;
+    font-weight: 600;
+    color: #00416B;
+    letter-spacing: 1px;
+}
+
+.Heading-4 .Text.tracking-number {
+    font-size: 14px;
+    font-weight: 600;
+    color: #42474E;
+}
+
+.Container.delivery-date {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    text-align: right;
+}
+
+.Container.delivery-date .Container:first-child .Text {
+    font-size: 12px;
+    color: #999;
+}
+
+.Container.delivery-date .Container:last-child .Text {
+    font-size: 14px;
+    font-weight: 600;
+    color: #42474E;
+}
+
+.Container.progress {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.Progress-Bar-Container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.Line {
+    width: 100%;
+    height: 2px;
+    background: #C2C7D0;
+    position: relative;
+}
+
+.Horizontal-Divider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2px;
+    width: 66%;
+    background: #002A48;
+}
+
+.Dots {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 0 8px;
+}
+
+.Container.dot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+}
+
+.Background.dot-active,
+.Background.dot-inactive {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.Background.dot-active {
+    background: #002A48;
+}
+
+.Background.dot-inactive {
+    background: #C2C7D0;
+}
+
+.Container.dot-label .Text {
+    font-size: 12px;
+    font-weight: 500;
+    color: #42474E;
+}
+
+.Background.location-info {
+    display: flex;
+    gap: 12px;
+    padding: 12px;
+    background: #F7F9FD;
+    border-radius: 8px;
+}
+
+.Background.location-info .Container.icon {
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.Container.info-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+}
+
+.Text.location-title {
+    font-size: 12px;
+    font-weight: 600;
+    color: #42474E;
+}
+
+.Text.location-detail {
+    font-size: 12px;
+    color: #42474E;
+}
+
+.Tracking-Card.secondary .Container.card-content {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+.Tracking-Card.secondary .Container.icon {
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.Tracking-Card.secondary .Container.info-content {
+    flex: 1;
+}
+
+.Text.status-text {
+    font-size: 12px;
+    color: #42474E;
+}
+
+.Container.arrow {
+    font-size: 20px;
+    color: #999;
+    flex-shrink: 0;
+}
+
+/* ========== BOTTOM NAVIGATION BAR ========== */
+.BottomNavBar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 390px;
+    height: 57px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 49.7px;
+    padding: 8px 32.87px;
+    background: #F7F9FD;
+    border-top: 1px solid #C2C7D0;
+    box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    z-index: 30;
+}
+
+.BottomNavBar-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0);
+    box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.Link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 16px;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+}
+
+.Link.active {
+    background: #FED000;
+    border-radius: 9999px;
+    padding: 4px 16px;
+}
+
+.Link .Container.icon {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Link .Container.text .Text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: 0.05em;
+    color: #42474E;
+}
+
+.Link.active .Container.text .Text {
+    color: #6F5900;
+}
+
+.Background.badge {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    width: 8px;
+    height: 8px;
+    background: #BA1A1A;
+    border-radius: 50%;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 480px) {
+    body,
+    .Início-Correios,
+    .BottomNavBar {
+        width: 100vw;
+    }
+}
