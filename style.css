@@ -294,7 +294,7 @@ body {
     position: absolute;
     right: 0;
     top: 0;
-    width: 50%;
+    width: 45%;
     height: 100%;
     background: #666;
     border-radius: 0 12px 12px 0;
@@ -311,7 +311,7 @@ body {
     position: absolute;
     right: 0;
     top: 0;
-    width: 50%;
+    width: 45%;
     height: 100%;
     background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.2));
 }
@@ -323,7 +323,8 @@ body {
     flex-direction: column;
     gap: 12px;
     padding: 24px;
-    width: 50%;
+    width: 55%;
+    min-width: 0;
 }
 
 .Section-Promotional-Banner .Heading-3 .Text {
@@ -332,11 +333,13 @@ body {
     font-size: 18px;
     color: #000;
     line-height: 1.3;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .Container.description .Text {
     font-size: 14px;
-    color: #42474E;
+    color: #000;
     line-height: 1.4;
 }
 
@@ -574,16 +577,18 @@ body {
 .BottomNavBar {
     position: fixed;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 390px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 390px;
     height: 57px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    gap: 49.7px;
-    padding: 8px 32.87px;
+    gap: 40px;
+    padding: 8px 20px;
     background: #F7F9FD;
     border-top: 1px solid #C2C7D0;
     box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
@@ -623,6 +628,19 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+}
+
+.Link .Container.icon img {
+    display: block;
+    width: 20px;
+    height: auto;
+}
+
+.BottomNavBar .Link .Container.text {
+    padding: 0;
 }
 
 .Link .Container.text .Text {
@@ -638,14 +656,80 @@ body {
     color: #6F5900;
 }
 
-.Background.badge {
+.Agendar-Coleta-em-Casa nav.BottomNavBar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 390px;
+    height: 57px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 40px;
+    padding: 8px 20px;
+    background: #F7F9FD;
+    border-top: 1px solid #C2C7D0;
+    box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    z-index: 30;
+}
+
+.Agendar-Coleta-em-Casa nav.BottomNavBar .Link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 16px;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+}
+
+.Agendar-Coleta-em-Casa nav.BottomNavBar .Link.active {
+    background: #FED000;
+    border-radius: 9999px;
+    padding: 4px 16px;
+}
+
+.Agendar-Coleta-em-Casa nav.BottomNavBar .Link .Container.icon {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+}
+
+.Agendar-Coleta-em-Casa nav.BottomNavBar .Link .Container.text {
+    padding: 0;
+}
+
+.Agendar-Coleta-em-Casa nav.BottomNavBar .Link .Container.text .Text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: 0.05em;
+    color: #42474E;
+}
+
+.Agendar-Coleta-em-Casa nav.BottomNavBar .Link.active .Container.text .Text {
+    color: #6F5900;
+}
+
+.Agendar-Coleta-em-Casa nav.BottomNavBar .BottomNavBar-shadow {
     position: absolute;
-    bottom: 10px;
-    right: 20px;
-    width: 8px;
-    height: 8px;
-    background: #BA1A1A;
-    border-radius: 50%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0);
+    box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 .Agendar-Coleta-em-Casa {
@@ -871,6 +955,26 @@ body {
     border-radius: 4px;
 }
 
+.Agendar-Coleta-em-Casa .Background-VerticalBorder-Shadow > .Container:nth-child(2) > .Container:last-child .Label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.Agendar-Coleta-em-Casa .Background-VerticalBorder-Shadow > .Container:nth-child(2) > .Container:last-child .Input {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    min-height: 20px;
+    background: #FFFFFF;
+    border: 1px solid #C2C7D0;
+    border-radius: 4px;
+    flex: none;
+}
+
 .Agendar-Coleta-em-Casa .Background-VerticalBorder-Shadow > .Container:last-child {
     display: flex;
     flex-wrap: wrap;
@@ -969,61 +1073,6 @@ body {
     border-radius: 12px;
     background: rgba(0, 0, 0, 0.05);
     z-index: -1;
-}
-
-.Agendar-Coleta-em-Casa .BottomNavBar {
-    position: relative;
-    width: 100%;
-    height: 65px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 48px;
-    padding: 8px 32px;
-    margin-top: 24px;
-    background: #F7F9FD;
-    border-top: 1px solid #C2C7D0;
-    box-shadow: 0 4px 6px -4 rgba(0, 0, 0, 0.1), 0 10px 15px -3 rgba(0, 0, 0, 0.1);
-}
-
-.Agendar-Coleta-em-Casa .BottomNavBar-shadow {
-    position: absolute;
-    inset: 0;
-    background: transparent;
-    box-shadow: 0 4px 6px -4 rgba(0, 0, 0, 0.1), 0 10px 15px -3 rgba(0, 0, 0, 0.1);
-    pointer-events: none;
-}
-
-.Agendar-Coleta-em-Casa .Container,
-.Agendar-Coleta-em-Casa .Background {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 4px;
-    padding: 4px 16px;
-    cursor: pointer;
-    text-align: center;
-}
-
-.Agendar-Coleta-em-Casa .Background {
-    background: #FFE07F;
-    border-radius: 9999px;
-}
-
-.Agendar-Coleta-em-Casa .Background .Text {
-    color: #6F5900;
-}
-
-.Agendar-Coleta-em-Casa .Text {
-    font-family: 'Inter', sans-serif;
-}
-
-.Agendar-Coleta-em-Casa .BottomNavBar .Container.icon img,
-.Agendar-Coleta-em-Casa .BottomNavBar .Background .Container.icon img {
-    width: 18px;
-    height: auto;
 }
 
 /* ========== RESPONSIVE ========== */
