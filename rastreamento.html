@@ -7,31 +7,74 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body class="Início-Correios">
-	<header class="Header-TopAppBar">
-		<div class="Container">
-			<button class="Button menu" aria-label="menu">☰</button>
-			<div class="Heading-1">
-				<div class="Text">Rastreio</div>
-			</div>
-		</div>
-		<div class="Background-Border">
-			<div class="User-Profile">
-				<img src="assets/figma/user-avatar.png" alt="avatar" style="width:100%;height:100%;border-radius:50%;object-fit:cover;"/>
-			</div>
-		</div>
-	</header>
+    <!-- BottomNavBar -->
+    <nav class="BottomNavBar">
+        <div class="BottomNavBar-shadow"></div>
+        <div class="Link">
+            <div class="Container icon">🏠</div>
+            <div class="Container text">
+                <span class="Text">Início</span>
+            </div>
+        </div>
+        <div class="Link active">
+            <div class="Container icon">📦</div>
+            <div class="Container text">
+                <span class="Text">Rastreio</span>
+            </div>
+        </div>
+        <div class="Link">
+            <div class="Container icon">🚚</div>
+            <div class="Container text">
+                <span class="Text">Coleta</span>
+            </div>
+        </div>
+        <div class="Link">
+            <div class="Container icon">🔔</div>
+            <div class="Container text">
+                <span class="Text">Alertas</span>
+            </div>
+            <div class="Background badge"></div>
+        </div>
+    </nav>
+
+    <!-- Header - TopAppBar -->
+    <header class="Header-TopAppBar">
+        <div class="Container">
+            <button class="Button menu">☰</button>
+            <div class="Heading-1">
+                <h1 class="Text">Correios</h1>
+            </div>
+        </div>
+        <div class="Background-Border">
+            <div class="User-Profile"></div>
+        </div>
+    </header>
 
 	<main class="Main">
 		<section class="Map Visualization Section">
 			<div class="Container">
 				<div class="Route Map">
-					<img src="assets/figma/route-map.png" alt="route map" style="width:100%;height:auto;display:block;border-radius:12px;"/>
+					<img src="assets/route-map.png" alt="route map" style="width:100%;height:auto;display:block;border-radius:12px;"/>
+					<div class="Tracking ID Float">
+						<div class="TrackingLabel Text">CÓDIGO DE RASTREIO</div>
+						<div class="TrackingCode Text">BR 923 104 555</div>
+					</div>
+					<section class="Section - Status Card">
+						<div class="Container status-card-top">
+							<div class="StatusBadge Text">EM ROTA DE ENTREGA</div>
+							<div class="StatusTitle Text">Seu pedido está chegando!</div>
+						</div>
+						<div class="Container status-card-row">
+							<div class="StatusLabel Text">PREVISÃO DE CHEGADA</div>
+							<div class="StatusValue Text">Chega hoje, até às 18:00</div>
+						</div>
+						<div class="Container status-card-row">
+							<div class="StatusLabel Text">ÚLTIMA LOCALIZAÇÃO</div>
+							<div class="StatusValue Text">Centro de Distribuição - São Paulo</div>
+						</div>
+					</section>
 				</div>
 				<div class="Gradient"></div>
-			</div>
-			<div class="Tracking ID Float" style="position:relative;top:-60px;margin:0 auto;max-width:310px;">
-				<div class="Text">CÓDIGO DE RASTREIO</div>
-				<div class="Text">BR 923 104 555</div>
 			</div>
 		</section>
 
@@ -40,12 +83,18 @@
 				<div class="Heading-3">
 					<div class="Text">Notificações Proativas</div>
 				</div>
-				<div class="Container">
-					<div class="Container">
+				<div class="NotificationList">
+					<div class="NotificationRow">
 						<div class="Text">A cada movimentação</div>
+						<div class="Switch on" aria-label="Ativado"></div>
 					</div>
-					<div class="Container">
-						<div class="Text">Alertas em tempo real</div>
+					<div class="NotificationRow">
+						<div class="Text">Previsão Alterada</div>
+						<div class="Switch off" aria-label="Desativado"></div>
+					</div>
+					<div class="NotificationRow">
+						<div class="Text">Objeto saiu para entrega</div>
+						<div class="Switch off" aria-label="Desativado"></div>
 					</div>
 				</div>
 			</div>
@@ -55,45 +104,39 @@
 			<div class="Heading-3">
 				<div class="Text">Linha do Tempo Detalhada</div>
 			</div>
-			<div class="Container">
-				<div class="Container">
-					<div class="Container">
-						<div class="Text">Objeto saiu para entrega ao destinatário</div>
-					</div>
-					<div class="Container">
-						<div class="Text">Hoje, 09:12 • Unidade de Distribuição, São Paulo</div>
-					</div>
-					<div class="Overlay+Border">
-						<div class="Container">
+			<div class="Timeline">
+				<div class="TimelineItem">
+					<div class="TimelineMarker"></div>
+					<div class="TimelineContent">
+						<div class="TimelineTitle Text">Objeto saiu para entrega ao destinatário</div>
+						<div class="TimelineMeta Text">Hoje, 09:12 • Unidade de Distribuição, São Paulo</div>
+						<div class="TimelineNote">
 							<div class="Text">DICA: Verifique se há alguém para receber o objeto no endereço informado.</div>
 						</div>
 					</div>
 				</div>
 
-				<div class="Container">
-					<div class="Container">
-						<div class="Text">Saindo do centro de distribuição</div>
-					</div>
-					<div class="Container">
-						<div class="Text">Ontem, 22:45 • Cajamar, SP</div>
-					</div>
-				</div>
-
-				<div class="Container">
-					<div class="Container">
-						<div class="Text">Em trânsito para sua cidade</div>
-					</div>
-					<div class="Container">
-						<div class="Text">Ontem, 14:20 • Unidade de Tratamento, Rio de Janeiro</div>
+				<div class="TimelineItem">
+					<div class="TimelineMarker"></div>
+					<div class="TimelineContent">
+						<div class="TimelineTitle Text">Saindo do centro de distribuição</div>
+						<div class="TimelineMeta Text">Ontem, 22:45 • Cajamar, SP</div>
 					</div>
 				</div>
 
-				<div class="Container">
-					<div class="Container">
-						<div class="Text">Objeto postado</div>
+				<div class="TimelineItem">
+					<div class="TimelineMarker"></div>
+					<div class="TimelineContent">
+						<div class="TimelineTitle Text">Em trânsito para sua cidade</div>
+						<div class="TimelineMeta Text">Ontem, 14:20 • Unidade de Tratamento, Rio de Janeiro</div>
 					</div>
-					<div class="Container">
-						<div class="Text">12 Mar, 10:05 • Agência dos Correios, Centro, RJ</div>
+				</div>
+
+				<div class="TimelineItem">
+					<div class="TimelineMarker"></div>
+					<div class="TimelineContent">
+						<div class="TimelineTitle Text">Objeto postado</div>
+						<div class="TimelineMeta Text">12 Mar, 10:05 • Agência dos Correios, Centro, RJ</div>
 					</div>
 				</div>
 			</div>
@@ -107,47 +150,9 @@
 			</div>
 		</section>
 
-		<section class="Section - Status Card">
-			<div class="Container">
-				<div class="Background">
-					<div class="Text">EM ROTA DE ENTREGA</div>
-				</div>
-				<div class="Text">Seu pedido está chegando!</div>
-			</div>
-
-			<div class="Container">
-				<div class="Container">
-					<div class="Text">PREVISÃO DE CHEGADA</div>
-					<div class="Text">Chega hoje, até às 18:00</div>
-				</div>
-				<div class="Container">
-					<div class="Text">ÚLTIMA LOCALIZAÇÃO</div>
-					<div class="Text">Centro de Distribuição - São Paulo</div>
-				</div>
-			</div>
-		</section>
-
 	</main>
 
-	<nav class="BottomNavBar">
-		<div class="BottomNavBar-shadow"></div>
-		<div class="Link">
-			<div class="Container icon">🏠</div>
-			<div class="Container text"><div class="Text">Início</div></div>
-		</div>
-		<div class="Link active">
-			<div class="Container icon">🔎</div>
-			<div class="Container text"><div class="Text">Rastreio</div></div>
-		</div>
-		<div class="Link">
-			<div class="Container icon">📦</div>
-			<div class="Container text"><div class="Text">Coleta</div></div>
-		</div>
-		<div class="Link">
-			<div class="Container icon">🔔</div>
-			<div class="Container text"><div class="Text">Alertas</div></div>
-		</div>
-	</nav>
+
 
 </body>
 </html>

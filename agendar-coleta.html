@@ -6,26 +6,51 @@
     <link rel="stylesheet" href="style.css">
     <title>Agendar Coleta em Casa</title>
 </head>
-<body>
-    <div class="Page-Link">
-        <a class="Button link" href="index.html">← Voltar</a>
-    </div>
-
-    <div class="Agendar-Coleta-em-Casa" data-name="Agendar Coleta em Casa">
-
-        <header class="Header-TopAppBar" data-name="Header - TopAppBar">
-            <div class="Container" data-name="Container">
-                <button class="Button menu" data-name="Button">
-                    <img src="assets/figma_downloads/figma_5_515.svg" alt="Menu">
-                </button>
-                <div class="Heading-1" data-name="Heading 1">
-                    <span class="Text">Correios</span>
-                </div>
+<body class="Início-Correios Agendar-Coleta-em-Casa">
+    <!-- BottomNavBar -->
+    <nav class="BottomNavBar">
+        <div class="BottomNavBar-shadow"></div>
+        <div class="Link">
+            <div class="Container icon">🏠</div>
+            <div class="Container text">
+                <span class="Text">Início</span>
             </div>
-            <div class="Background-Border" data-name="Background+Border">
-                <div class="User-Profile" data-name="User Profile"></div>
+        </div>
+        <div class="Link">
+            <div class="Container icon">📦</div>
+            <div class="Container text">
+                <span class="Text">Rastreio</span>
             </div>
-        </header>
+        </div>
+        <div class="Link active">
+            <div class="Container icon">🚚</div>
+            <div class="Container text">
+                <span class="Text">Coleta</span>
+            </div>
+        </div>
+        <div class="Link">
+            <div class="Container icon">🔔</div>
+            <div class="Container text">
+                <span class="Text">Alertas</span>
+            </div>
+            <div class="Background badge"></div>
+        </div>
+    </nav>
+
+    <!-- Header - TopAppBar -->
+    <header class="Header-TopAppBar">
+        <div class="Container">
+            <button class="Button menu">☰</button>
+            <div class="Heading-1">
+                <h1 class="Text">Correios</h1>
+            </div>
+        </div>
+        <div class="Background-Border">
+            <div class="User-Profile"></div>
+        </div>
+    </header>
+
+    <div class="Início-Correios Agendar-Coleta-em-Casa">
 
         <main class="Main" data-name="Main">
             <section class="Progress-Stepper" data-name="Progress Stepper">
@@ -81,7 +106,7 @@
                                 <span class="Text">Peso Estimado</span>
                             </div>
                             <div class="Options" data-name="Options">
-                                <img class="Button icon" src="assets/figma_downloads/figma_5_559.svg" alt="">
+                                <span class="Button icon">⚖️</span>
                                 <div class="Container" data-name="Container">
                                     <span class="Text">Até 1kg</span>
                                 </div>
@@ -93,7 +118,7 @@
                                     <span class="Text">Tamanho</span>
                                 </div>
                                 <div class="Options" data-name="Options">
-                                    <img class="Button icon" src="assets/figma_downloads/figma_5_569.svg" alt="">
+                                    <span class="Button icon">📦</span>
                                     <div class="Container" data-name="Container">
                                         <span class="Text">Pequeno (Caixa sapato)</span>
                                     </div>
@@ -111,11 +136,11 @@
                     </div>
                     <div class="Container" data-name="Container">
                         <div class="Background pill" data-name="Background">
-                            <img class="Container icon" src="assets/figma_downloads/figma_5_581.svg" alt="">
+                            <span class="Container icon">💻</span>
                             <span class="Text">Digital e Confiável</span>
                         </div>
                         <div class="Background pill" data-name="Background">
-                            <img class="Container icon" src="assets/figma_downloads/figma_5_585.svg" alt="">
+                            <span class="Container icon">⏱</span>
                             <span class="Text">Sem Filas</span>
                         </div>
                     </div>
@@ -206,7 +231,7 @@
                         <div class="Container" data-name="Container">
                             <span class="Text">Até 1kg, Pequeno</span>
                         </div>
-                        <img class="Container icon" src="assets/figma_downloads/figma_5_663.svg" alt="">
+                        <span class="Container icon">✅</span>
                     </div>
                     <div class="Container" data-name="Container">
                         <div class="Container" data-name="Container">
@@ -215,7 +240,7 @@
                         <div class="Container" data-name="Container">
                             <span class="Text">Av. Paulista, 1000 - SP</span>
                         </div>
-                        <img class="Container icon" src="assets/figma_downloads/figma_5_670.svg" alt="">
+                        <span class="Container icon">📍</span>
                     </div>
                     <div class="Container" data-name="Container">
                         <div class="Container" data-name="Container">
@@ -224,50 +249,41 @@
                         <div class="Container" data-name="Container">
                             <span class="Text">24 Mai • Manhã</span>
                         </div>
-                        <img class="Container icon" src="assets/figma_downloads/figma_5_677.svg" alt="">
+                        <span class="Container icon">📅</span>
                     </div>
                 </div>
             </section>
         </main>
 
-        <div class="Sticky-Footer-Action" data-name="Sticky Footer Action">
-            <button class="Button CTA" data-name="Button">
-                <div class="Button-shadow" data-name="Button:shadow"></div>
-                <div class="Container" data-name="Container">
-                    <span class="Text">Próximo Passo</span>
-                </div>
-                <img class="Container icon" src="assets/figma_downloads/figma_5_683.svg" alt="">
-            </button>
-        </div>
-
-        <nav class="BottomNavBar" data-name="BottomNavBar">
-            <div class="BottomNavBar-shadow" data-name="BottomNavBar:shadow"></div>
-            <div class="Link">
-                <div class="Container icon">🏠</div>
-                <div class="Container text">
-                    <span class="Text">Início</span>
-                </div>
-            </div>
-            <div class="Link">
-                <div class="Container icon">📦</div>
-                <div class="Container text">
-                    <span class="Text">Rastreio</span>
-                </div>
-            </div>
-            <div class="Link active">
-                <div class="Container icon">🚚</div>
-                <div class="Container text">
-                    <span class="Text">Coleta</span>
-                </div>
-            </div>
-            <div class="Link">
-                <div class="Container icon">🔔</div>
-                <div class="Container text">
-                    <span class="Text">Alertas</span>
-                </div>
-                <div class="Background badge"></div>
-            </div>
-        </nav>
     </div>
+
+    <nav class="BottomNavBar">
+        <div class="BottomNavBar-shadow"></div>
+        <div class="Link">
+            <div class="Container icon">🏠</div>
+            <div class="Container text">
+                <span class="Text">Início</span>
+            </div>
+        </div>
+        <div class="Link">
+            <div class="Container icon">📦</div>
+            <div class="Container text">
+                <span class="Text">Rastreio</span>
+            </div>
+        </div>
+        <div class="Link active">
+            <div class="Container icon">🚚</div>
+            <div class="Container text">
+                <span class="Text">Coleta</span>
+            </div>
+        </div>
+        <div class="Link">
+            <div class="Container icon">🔔</div>
+            <div class="Container text">
+                <span class="Text">Alertas</span>
+            </div>
+            <div class="Background badge"></div>
+        </div>
+    </nav>
 </body>
 </html>
