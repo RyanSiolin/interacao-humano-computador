@@ -25,6 +25,7 @@
         <main class="Main" data-name="Main">
             <section class="Progress-Stepper" data-name="Progress Stepper">
                 <div class="Horizontal-Divider" data-name="Horizontal Divider"></div>
+                <div class="Horizontal-Divider-Fill" data-name="Horizontal Divider Fill"></div>
                 <div class="Container" data-name="Container">
                     <div class="Background active" data-name="Background">
                         <div class="Overlay-Shadow" data-name="Overlay+Shadow"></div>
@@ -75,33 +76,45 @@
                             <div class="Label" data-name="Label">
                                 <span class="Text">Peso Estimado</span>
                             </div>
-                            <div class="Options" data-name="Options">
-                                <span class="Button icon">⚖️</span>
-                                <div class="Container" data-name="Container">
+                            <div class="Options weight-options">
+                                <button class="Option selected" data-weight="1">
+                                    <span class="icon">⚖️</span>
                                     <span class="Text">Até 1kg</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="Container" data-name="Container">
-                            <div class="Container" data-name="Container">
-                                <div class="Label" data-name="Label">
-                                    <span class="Text">Tamanho</span>
-                                </div>
-                                <div class="Options" data-name="Options">
-                                    <span class="Button icon">📦</span>
-                                    <div class="Container" data-name="Container">
-                                        <span class="Text">Pequeno (Caixa sapato)</span>
-                                    </div>
-                                </div>
+                                </button>
+                                <button class="Option" data-weight="3">
+                                    <span class="icon">⚖️</span>
+                                    <span class="Text">1-3kg</span>
+                                </button>
+                                <button class="Option" data-weight="5">
+                                    <span class="icon">⚖️</span>
+                                    <span class="Text">3-5kg</span>
+                                </button>
                             </div>
                         </div>
                         <div class="Container" data-name="Container">
                             <div class="Label" data-name="Label">
-                                <div class="Input" data-name="Input"></div>
-                                <div class="Container" data-name="Container">
-                                    <span class="Text">Frágil?</span>
-                                </div>
+                                <span class="Text">Tamanho</span>
                             </div>
+                            <div class="Options size-options">
+                                <button class="Option selected" data-size="small">
+                                    <span class="icon">📦</span>
+                                    <span class="Text">Pequeno (Caixa sapato)</span>
+                                </button>
+                                <button class="Option" data-size="medium">
+                                    <span class="icon">📦</span>
+                                    <span class="Text">Médio (Caixa de sapato grande)</span>
+                                </button>
+                                <button class="Option" data-size="large">
+                                    <span class="icon">📦</span>
+                                    <span class="Text">Grande (Caixa de papelão)</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="Container" data-name="Container">
+                            <label class="Label fragile-label">
+                                <input type="checkbox" class="FragileCheckbox" id="fragile-checkbox">
+                                <span class="Text">Frágil?</span>
+                            </label>
                         </div>
                     </div>
                     <div class="Container" data-name="Container">
@@ -122,23 +135,36 @@
                     <span class="Text">Endereço de Coleta</span>
                 </div>
                 <div class="Background-VerticalBorder-Shadow" data-name="Background+VerticalBorder+Shadow">
-                    <div class="Background" data-name="Background"></div>
                     <div class="Container" data-name="Container">
                         <div class="Container" data-name="Container">
                             <div class="Label" data-name="Label">
                                 <span class="Text">CEP</span>
                             </div>
-                            <div class="Input" data-name="Input">
-                                <span class="Text">00000-000</span>
-                            </div>
+                            <input type="text" class="AddressInput" id="cep-input" placeholder="00000-000">
                         </div>
                         <div class="Container" data-name="Container">
                             <div class="Label" data-name="Label">
                                 <span class="Text">Logradouro</span>
                             </div>
-                            <div class="Input" data-name="Input">
-                                <span class="Text">Ex: Av. Paulista, 1000</span>
+                            <input type="text" class="AddressInput" id="logradouro-input" placeholder="Ex: Av. Paulista, 1000">
+                        </div>
+                        <div class="Container" data-name="Container">
+                            <div class="Label" data-name="Label">
+                                <span class="Text">Número</span>
                             </div>
+                            <input type="text" class="AddressInput" id="numero-input" placeholder="Ex: 123">
+                        </div>
+                        <div class="Container" data-name="Container">
+                            <div class="Label" data-name="Label">
+                                <span class="Text">Bairro</span>
+                            </div>
+                            <input type="text" class="AddressInput" id="bairro-input" placeholder="Ex: Bela Vista">
+                        </div>
+                        <div class="Container" data-name="Container">
+                            <div class="Label" data-name="Label">
+                                <span class="Text">Cidade</span>
+                            </div>
+                            <input type="text" class="AddressInput" id="cidade-input" placeholder="Ex: São Paulo">
                         </div>
                     </div>
                 </div>
@@ -152,33 +178,29 @@
                     <div class="Container" data-name="Container">
                         <span class="Text">Escolha o melhor momento para o carteiro passar.</span>
                     </div>
-                    <div class="Container" data-name="Container">
-                        <button class="Button selected" data-name="Button">
+                    <div class="Container date-options" data-name="Container">
+                        <button class="DateButton selected" data-date="2026-06-24" data-day="HOJE" data-day-number="24">
                             <span class="Text">HOJE<br>24</span>
                         </button>
-                        <button class="Button" data-name="Button">
+                        <button class="DateButton" data-date="2026-06-25" data-day="TER" data-day-number="25">
                             <span class="Text">TER<br>25</span>
                         </button>
-                        <button class="Button" data-name="Button">
+                        <button class="DateButton" data-date="2026-06-26" data-day="QUA" data-day-number="26">
                             <span class="Text">QUA<br>26</span>
                         </button>
-                        <button class="Button" data-name="Button">
+                        <button class="DateButton" data-date="2026-06-27" data-day="QUI" data-day-number="27">
                             <span class="Text">QUI<br>27</span>
                         </button>
                     </div>
-                    <div class="Container" data-name="Container">
-                        <div class="Label" data-name="Label">
-                            <div class="Input" data-name="Input"></div>
-                            <div class="Container" data-name="Container">
-                                <span class="Text">Manhã</span>
-                            </div>
-                        </div>
-                        <div class="Label" data-name="Label">
-                            <div class="Input" data-name="Input"></div>
-                            <div class="Container" data-name="Container">
-                                <span class="Text">Tarde</span>
-                            </div>
-                        </div>
+                    <div class="Container time-options" data-name="Container">
+                        <label class="TimeLabel">
+                            <input type="checkbox" class="TimeCheckbox" id="manha-checkbox" checked>
+                            <span class="Text">Manhã</span>
+                        </label>
+                        <label class="TimeLabel">
+                            <input type="checkbox" class="TimeCheckbox" id="tarde-checkbox">
+                            <span class="Text">Tarde</span>
+                        </label>
                     </div>
                 </div>
             </section>

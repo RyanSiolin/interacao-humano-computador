@@ -731,7 +731,7 @@ section.Help.Section .Text {
     top: 0;
     left: 0;
     height: 2px;
-    width: 66%;
+    width: 94%;
     background: #002A48;
 }
 
@@ -1075,19 +1075,29 @@ section.Help.Section .Text {
 .Agendar-Coleta-em-Casa .Progress-Stepper {
     position: relative;
     width: 100%;
-    padding: 0 8px;
+    padding: 0 24px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .Agendar-Coleta-em-Casa .Horizontal-Divider {
     position: absolute;
-    top: 29px;
-    left: 8px;
-    right: 8px;
+    top: 16px;
+    left: 24px;
+    right: 24px;
     height: 2px;
     background: #C2C7D0;
+    z-index: 1;
+}
+
+.Agendar-Coleta-em-Casa .Horizontal-Divider-Fill {
+    position: absolute;
+    top: 16px;
+    height: 2px;
+    background: #002A48;
+    z-index: 1;
+    transition: width 0.3s ease, left 0.3s ease;
 }
 
 .Agendar-Coleta-em-Casa .Progress-Stepper > .Container {
@@ -1095,7 +1105,8 @@ section.Help.Section .Text {
     flex-direction: column;
     align-items: center;
     gap: 4px;
-    width: calc((100% - 24px) / 4);
+    width: auto;
+    z-index: 2;
 }
 
 .Agendar-Coleta-em-Casa .Progress-Stepper .Background {
@@ -1106,6 +1117,7 @@ section.Help.Section .Text {
     height: 32px;
     border-radius: 9999px;
     background: #E0E3E6;
+    z-index: 3;
 }
 
 .Agendar-Coleta-em-Casa .Progress-Stepper .Background.active {
@@ -1140,10 +1152,116 @@ section.Help.Section .Text {
 .Agendar-Coleta-em-Casa .Section-Step-3-Date-Time,
 .Agendar-Coleta-em-Casa .Section-Step-4-Confirmation {
     width: 100%;
-    max-width: 390px;
+    max-width: 600px;
     display: flex;
     flex-direction: column;
     gap: 16px;
+}
+
+/* Options/Buttons */
+.Options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.Option, .DateButton {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #F2F4F7;
+    border: 2px solid #C2C7D0;
+    border-radius: 10px;
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+}
+
+.Option:hover, .DateButton:hover {
+    border-color: #00416B;
+}
+
+.Option.selected, .DateButton.selected {
+    background: #CFE5FF;
+    border-color: #002A48;
+}
+
+.Option .icon, .DateButton .icon {
+    font-size: 24px;
+}
+
+/* Fragile Checkbox */
+.fragile-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.FragileCheckbox {
+    width: 24px;
+    height: 24px;
+    accent-color: #002A48;
+    cursor: pointer;
+}
+
+/* Address Inputs */
+.AddressInput {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #C2C7D0;
+    border-radius: 10px;
+    background: #F2F4F7;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #42474E;
+    box-sizing: border-box;
+}
+
+.AddressInput:focus {
+    outline: none;
+    border-color: #002A48;
+    background: #FFFFFF;
+}
+
+/* Date Buttons */
+.date-options {
+    display: flex;
+    gap: 12px;
+    justify-content: space-between;
+}
+
+.DateButton {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 8px;
+    flex: 1;
+    min-width: 70px;
+}
+
+/* Time Options */
+.time-options {
+    display: flex;
+    gap: 24px;
+    margin-top: 16px;
+}
+
+.TimeLabel {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.TimeCheckbox {
+    width: 24px;
+    height: 24px;
+    accent-color: #002A48;
+    cursor: pointer;
 }
 
 .Agendar-Coleta-em-Casa .Heading-2 .Text {
@@ -1194,23 +1312,8 @@ section.Help.Section .Text {
 
 .Agendar-Coleta-em-Casa .Options {
     display: flex;
-    align-items: center;
-    gap: 12px;
-    background: #F2F4F7;
-    border: 1px solid #C2C7D0;
-    border-radius: 8px;
-    padding: 12px 16px;
-    position: relative;
-}
-
-.Agendar-Coleta-em-Casa .Options::after {
-    content: '▼';
-    position: absolute;
-    right: 14px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #7A869A;
-    font-size: 12px;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .Agendar-Coleta-em-Casa .Options img,
