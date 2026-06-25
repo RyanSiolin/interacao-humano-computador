@@ -8,7 +8,7 @@ body {
     font-family: 'Inter', sans-serif;
     background: linear-gradient(to bottom, #F7F9FD, #FFFFFF);
     color: #42474E;
-    width: 390px;
+    width: 100%;
     margin: 0 auto;
     min-height: 100vh;
 }
@@ -18,7 +18,9 @@ body {
     flex-direction: column;
     gap: 0;
     padding: 0 0 24px;
-    width: 390px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
     min-height: 100vh;
     position: relative;
     background: linear-gradient(to bottom, #F7F9FD, #FFFFFF);
@@ -121,7 +123,8 @@ body {
     flex-direction: column;
     gap: 8px;
     padding: 16px;
-    width: 350px;
+    width: calc(100% - 40px);
+    max-width: 560px;
     background: #002A48;
     border-radius: 12px;
     box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
@@ -534,7 +537,8 @@ section.Help.Section .Text {
     position: relative;
     display: flex;
     align-items: flex-end;
-    width: 350px;
+    width: calc(100% - 40px);
+    max-width: 560px;
     height: 200px;
     background: #FED000;
     border-radius: 12px;
@@ -833,7 +837,7 @@ section.Help.Section .Text {
     right: 0;
     margin: 0 auto;
     width: 100%;
-    max-width: 390px;
+    max-width: 600px;
     height: 57px;
     display: flex;
     flex-direction: row;
@@ -844,7 +848,7 @@ section.Help.Section .Text {
     background: #F7F9FD;
     border-top: 1px solid #C2C7D0;
     box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
-    z-index: 30;
+    z-index: 9999;
 }
 
 .BottomNavBar-shadow {
@@ -867,6 +871,8 @@ section.Help.Section .Text {
     cursor: pointer;
     position: relative;
     text-align: center;
+    z-index: 1000;
+    user-select: none;
 }
 
 .Link.active {
@@ -915,7 +921,7 @@ section.Help.Section .Text {
     right: 0;
     margin: 0 auto;
     width: 100%;
-    max-width: 390px;
+    max-width: 600px;
     height: 57px;
     display: flex;
     flex-direction: row;
@@ -926,7 +932,7 @@ section.Help.Section .Text {
     background: #F7F9FD;
     border-top: 1px solid #C2C7D0;
     box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
-    z-index: 30;
+    z-index: 9999;
 }
 
 .Agendar-Coleta-em-Casa nav.BottomNavBar .Link {
@@ -939,6 +945,8 @@ section.Help.Section .Text {
     cursor: pointer;
     position: relative;
     text-align: center;
+    z-index: 1000;
+    user-select: none;
 }
 
 .Agendar-Coleta-em-Casa nav.BottomNavBar .Link.active {
@@ -987,7 +995,8 @@ section.Help.Section .Text {
 .Agendar-Coleta-em-Casa {
     display: flex;
     flex-direction: column;
-    width: 390px;
+    width: 100%;
+    max-width: 600px;
     min-height: 100vh;
     margin: 0 auto;
     position: relative;
@@ -1268,12 +1277,16 @@ section.Help.Section .Text {
 }
 
 .Agendar-Coleta-em-Casa .hidden-section {
-    position: absolute;
-    left: 0;
-    top: 364px;
-    width: 100%;
-    opacity: 0;
-    pointer-events: none;
+    display: none;
+}
+
+.Agendar-Coleta-em-Casa .Section-Step-1-Package-Details,
+.Agendar-Coleta-em-Casa .Section-Step-2-Pickup-Address,
+.Agendar-Coleta-em-Casa .Section-Step-3-Date-Time,
+.Agendar-Coleta-em-Casa .Section-Step-4-Confirmation {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.3s ease;
 }
 
 .Agendar-Coleta-em-Casa .Section-Step-2-Pickup-Address .Input,
@@ -1343,11 +1356,31 @@ section.Help.Section .Text {
 }
 
 /* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    .Section-Quick-Actions-Grid {
+        padding: 0 16px;
+        gap: 8px;
+    }
+    
+    .Button.quick-action {
+        padding: 12px 8px;
+    }
+}
+
 @media (max-width: 480px) {
     body,
     .Início-Correios,
     .BottomNavBar,
     .Agendar-Coleta-em-Casa {
         width: 100vw;
+    }
+    
+    .Hero-Search-Section,
+    .Section-Promotional-Banner {
+        width: calc(100% - 32px);
+    }
+    
+    .Section-Promotional-Banner {
+        height: 180px;
     }
 }
