@@ -248,6 +248,20 @@ body {
     position: relative;
     background: #D6DBE8;
     transition: background 0.2s ease;
+    cursor: pointer;
+}
+
+.Switch::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    border-radius: 999px;
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease;
 }
 
 .Detailed.Timeline.Section {
@@ -387,8 +401,8 @@ body {
 
 .status-card-row {
     display: flex;
-    justify-content: space-between;
-    gap: 16px;
+    flex-direction: column;
+    gap: 4px;
     padding: 12px 14px;
     border-radius: 18px;
     background: #F7F9FD;
@@ -403,7 +417,6 @@ body {
     font-size: 14px;
     font-weight: 700;
     color: #002A48;
-    text-align: right;
 }
 
 section.Help.Section {
@@ -419,8 +432,21 @@ section.Help.Section .Text {
     font-size: 14px;
     line-height: 1.6;
 }
+
+.Button.help-btn {
+    margin-top: 12px;
+    background: #002A48;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+}
 .Switch.on {
-    background: #4F90FF;
+    background: #002A48;
 }
 
 .Switch.on::after {

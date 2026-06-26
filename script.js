@@ -32,9 +32,22 @@ function setupBottomNav() {
                 case 2:
                     window.location.href = 'agendar-coleta.html';
                     break;
+                case 3:
+                    alert('A SER IMPLEMENTADO');
+                    break;
             }
         });
     });
+}
+
+// Help button
+function setupHelpButton() {
+    const helpBtn = document.querySelector('.Button.help-btn');
+    if (helpBtn) {
+        helpBtn.addEventListener('click', () => {
+            alert('A SER IMPLEMENTADO');
+        });
+    }
 }
 
 // Quick actions navigation on index.html
@@ -288,6 +301,17 @@ function setupStepNavigation() {
     }
 }
 
+// Setup interactive switches
+function setupSwitches() {
+    const switches = document.querySelectorAll('.Switch');
+    switches.forEach(switchEl => {
+        switchEl.addEventListener('click', () => {
+            switchEl.classList.toggle('on');
+            switchEl.classList.toggle('off');
+        });
+    });
+}
+
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     setupBottomNav();
@@ -301,4 +325,6 @@ document.addEventListener('DOMContentLoaded', () => {
     setupTimeCheckboxes();
     setupStepNavigation();
     updateProgressStepper();
+    setupSwitches();
+    setupHelpButton();
 });
